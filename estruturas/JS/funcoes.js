@@ -1,25 +1,3 @@
-// let - Variável mutável
-let nome = "Kaic";
-console.log(nome);
-
-nome = "Kaic Cesar"
-console.log(nome)
-
-// const - Variável imutável
-const pi = 3.14
-console.log(pi)
-
-// Declaração de variáveis em sequencia
-let a = 10, b = 56, c = 3;
-console.log(a);
-console.log(b);
-console.log(c);
-
-
-/*  ------------
-    FUNÇÕES E OBJETOS
- ------------*/  
-
 // Função Prompt
 // const age = prompt("Digite sua idade: ");
 // console.log(`Você tem ${age} anos.`)
@@ -42,4 +20,5 @@ console.log(Math.floor(5.91))
 console.log("Teste") // Funciona
 console.error("Teste de Erro") // Mostra um erro
 console.warn("Aviso") // Mostra um aviso 
+
 
