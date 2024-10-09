@@ -34,3 +34,20 @@ for(let x = 0; x < 5; x++) {
 }
 
 
+for(let g = 20; g > 10; g--) {
+    console.log(g)
+    if(g === 12) {
+        console.log("chegou no 12")
+        break;
+    }
+}
+
+
+for(let a = 0; a <= 10 ; a++) {
+    if(a % 2 == 0) {
+        console.log("Numero par!");
+        continue;
+    }
+
+    console.log(a);
+}   

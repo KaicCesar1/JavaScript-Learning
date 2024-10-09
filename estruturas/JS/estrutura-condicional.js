@@ -32,3 +32,24 @@ if (1 > 2) {
 } else {
     console.log("Saiu")
 }
+
+
+// SWITCH
+
+const response = 404;
+
+switch (response) {
+    case 200:
+        console.log("Sucesso");
+        break;
+    case 400:
+        console.log("Unauthorized");
+        break;
+    case 404: 
+        console.log("Página inexistente");
+        break;
+    default:
+        break;
+}
+
+
