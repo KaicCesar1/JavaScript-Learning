@@ -255,3 +255,125 @@ console.log(trimTest.length)
 console.log(trimTest.trim().length)
 
 
+// 19 - PadStart
+
+const testPadStart = "1"
+
+
+const newNumber = testPadStart.padStart(4, "0");
+
+console.log(`testPadStar: ${testPadStart}`);
+console.log(`newNumber: ${newNumber}`);
+
+const testPadEnd = testPadStart.padEnd(4, "0");
+console.log(testPadEnd)
+
+
+// 20 - Split
+
+const frase = "O rato roeu a roupa do rei de Roma"
+
+const arrayDaFrase = frase.split(" ");
+console.log(arrayDaFrase);
+
+
+for(i = 0; i < arrayDaFrase.length; i++) {
+    if(arrayDaFrase[i] === "rei") {
+        console.log(`Encontrei a palavra ${arrayDaFrase[i]}`)
+        break
+    }
+}
+
+// 21 - Join
+const fraseDeNovo = arrayDaFrase.join(" ");
+console.log(fraseDeNovo)
+
+
+// 22 - Repeat
+const word = "Testando \n";
+console.log(word.repeat(3));
+
+
+
+// 23 - Rest Operator / Rest Parameters
+
+const somaInfinita = (...args) => {
+    let total = 0
+
+    for (let i = 0; i < args.length; i++) {
+        total += args[i];
+    }
+
+    return total;
+}
+
+console.log(somaInfinita(1, 5, 4));
+console.log(somaInfinita(10, 50, 41));
+
+
+// 24 - For...of
+
+const somaInfinita2 = (...args) => {
+    let total = 0
+
+    for(num of args){
+        total += num;
+    }
+
+    return total;
+}
+console.log(somaInfinita2(1, 6, 12, 7, 4))
+console.log(somaInfinita2(12,34,32,12,59,4))
+
+
+// 25 - Destructuring em objetos
+const userDetails = {
+    firstName: "Kaic",
+    lastname: "Cesar",
+    job: "Developer"
+}
+
+const {firstName, lastname, job} = userDetails;
+
+console.log(firstName, lastname, job);
+
+// renomear as variáveis
+
+const {firstName: primeiroNome} = userDetails;
+console.log(primeiroNome);
+
+
+
+// 26 - Destructuring em Arrays
+const myList = [ "Avião", "Moto", "Carro"];
+
+const [veiculoA, veiculoB, veiculoC] = myList;
+console.log(veiculoA, veiculoB, veiculoC);
+
+
+// MARK ------
+
+// 27 - JSON
+
+const myJson = '{ "nome" : "Kaic", "age" : 23, "Skills": ["JavaScript", "PHP", "Java"]}'
+
+
+// 28 - JSON para Objeto / Objeto para JSON
+
+const myObject = JSON.parse(myJson);
+console.log(myObject)
+ 
+// Json inválido
+const badJson = '{"name": Kaic}'
+//const myBadObject = JSON.parse(badJson)
+
+myObject.profission = "Software Engenieer"
+console.log(myObject)
+
+
+
+const myNewJson = JSON.stringify(myObject);
+console.log(myNewJson);
+
+console.log(typeof myObject);
+console.log(typeof myNewJson);
