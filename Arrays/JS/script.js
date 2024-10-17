@@ -212,3 +212,46 @@ const posts = [
 posts.forEach((post) => {
     console.log(`Exibindo post: ${post.title} da categoria ${post.category}`);
 })
+
+
+// 16 - Includes
+
+const brands = ["BMW", "Fiat", "Porsche"];
+console.log(brands.includes("Fiat"));
+console.log(brands.includes("Ferrari"));
+
+function checkBrand(x) {
+    if(brands.includes(x)) {
+        return `Existe carros da marca ${x}`
+    }
+
+    return `Não existe carros da marca ${x}`
+}
+
+const response = checkBrand("Mercedes");
+console.log(response)
+
+
+// 17 - Reverse
+
+const reverseTest = [ 1, 2, 3, 4, 5];
+
+reverseTest.reverse()
+
+console.log(reverseTest)
+
+
+// MARK ---------
+
+// Métodos de String
+
+//  18 - trim
+const trimTest = "    testando \n   "
+
+console.log(trimTest);
+console.log(trimTest.trim())
+
+console.log(trimTest.length)
+console.log(trimTest.trim().length)
+
+
