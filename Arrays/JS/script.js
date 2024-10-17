@@ -193,3 +193,5 @@ const testSlice= ["a", "b", "c", "d", "e"];
 const subArray = testSlice.slice(2, 4);
 console.log(testSlice);
 console.log(subArray);
+
+
