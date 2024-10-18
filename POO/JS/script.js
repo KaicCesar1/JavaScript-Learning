@@ -133,7 +133,6 @@ console.log(myPost)
 
 
 // 8 - Heranças
-
 class Mamifero {
     constructor(patas) {
         this.patas = patas
