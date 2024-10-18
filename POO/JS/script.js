@@ -87,3 +87,69 @@ scania.descreverCaminhao()
 
 const volvo = new caminhao(8, "Branco");
 volvo.descreverCaminhao();
+
+
+// Symbols com classe
+class aviao {
+    constructor(marca, turbinas) {
+        this.marca = marca
+        this.turbinas = turbinas
+    }
+}
+
+const asas = Symbol() 
+aviao.prototype[asas] = 2
+
+const boeing = new aviao("Boeing", 4);
+console.log(boeing);
+console.log(boeing[asas]);
+
+
+// 7 - Getters e Setters
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo
+        this.descricao = descricao
+        this.tags = tags
+    }
+    get exibirTitulo() {
+        return `Você está lendo: ${this.titulo}`;
+    }
+
+    set adicionarTags(tags) {
+        const tagsArrays = tags.split(", ");
+        this.tags = tagsArrays
+    }
+}
+
+const myPost = new Post("IA", "Inteligencia Artificial");
+
+console.log(myPost)
+console.log(myPost.exibirTitulo)
+
+myPost.adicionarTags = "programacao, python, ml"
+
+console.log(myPost)
+
+
+// 8 - Heranças
+
+class Mamifero {
+    constructor(patas) {
+        this.patas = patas
+    }
+}
+
+class Lobo extends Mamifero {
+    constructor(patas, nome) {
+        super(patas, patas)
+        this.nome = nome
+    }
+}
+
+const slink = new Lobo(4, "Slink")
+
+
+// 9 - InstaceOf
+console.log(slink instanceof Lobo)
+console.log(Lobo instanceof Mamifero)
